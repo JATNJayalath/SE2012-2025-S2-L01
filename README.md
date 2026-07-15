@@ -90,10 +90,6 @@ To clone a repository, you need the URL of the repository. This can be found on 
 git clone <<URI of the Repo>>
 ```
 
-```bash
-git clone <<URI of the Repo>>
-```
-
 ### 4. Making Changes
 
 Navigate into the cloned repository:
@@ -101,10 +97,6 @@ Navigate into the cloned repository:
 **Windows & Linux:**
 
 ```powershell
-cd repository-name
-```
-
-```bash
 cd repository-name
 ```
 
@@ -154,19 +146,11 @@ After making changes, stage them for commit:
 git add .
 ```
 
-```bash
-git add .
-```
-
 `'.'` stages all changed files. You can also specify individual files by name:
 
 **Windows & Linux:**
 
 ```powershell
-git add example.java
-```
-
-```bash
 git add example.java
 ```
 
@@ -180,10 +164,6 @@ Commit your staged changes with a meaningful message:
 git commit -m "Your commit message"
 ```
 
-```bash
-git commit -m "Your commit message"
-```
-
 ### 7. Pushing Changes
 
 Push your changes to the remote repository:
@@ -191,10 +171,6 @@ Push your changes to the remote repository:
 **Windows & Linux:**
 
 ```powershell
-git push origin main
-```
-
-```bash
 git push origin main
 ```
 
@@ -210,10 +186,6 @@ Create a new branch and switch to it immediately:
 git checkout -b branch-name
 ```
 
-```bash
-git checkout -b branch-name
-```
-
 Or, create the branch first and switch to it separately:
 
 **Windows & Linux:**
@@ -223,20 +195,11 @@ git branch branch-name
 git checkout branch-name
 ```
 
-```bash
-git branch branch-name
-git checkout branch-name
-```
-
 To list all local branches (the active branch is marked with `*`):
 
 **Windows & Linux:**
 
 ```powershell
-git branch
-```
-
-```bash
 git branch
 ```
 
@@ -250,10 +213,6 @@ To switch to an existing branch:
 git checkout branch-name
 ```
 
-```bash
-git checkout branch-name
-```
-
 Or using the newer `switch` command (Git 2.23+):
 
 **Windows & Linux:**
@@ -262,19 +221,11 @@ Or using the newer `switch` command (Git 2.23+):
 git switch branch-name
 ```
 
-```bash
-git switch branch-name
-```
-
 To switch back to `main`:
 
 **Windows & Linux:**
 
 ```powershell
-git checkout main
-```
-
-```bash
 git checkout main
 ```
 
@@ -288,19 +239,11 @@ When pushing a new branch for the first time, set the upstream remote so future 
 git push -u origin branch-name
 ```
 
-```bash
-git push -u origin branch-name
-```
-
 For subsequent pushes on the same branch:
 
 **Windows & Linux:**
 
 ```powershell
-git push
-```
-
-```bash
 git push
 ```
 
