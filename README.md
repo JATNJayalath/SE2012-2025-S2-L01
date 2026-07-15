@@ -2,19 +2,31 @@
 
 
 ## Refreshing Git
-Follow the steps below to access Git through the CLI in Linux, temporarily log in, clone your repository, make changes, commit them, push the changes, and pull the latest changes.
+Follow the steps below to access Git through Windows Terminal, temporarily log in, clone your repository, make changes, commit them, and push the changes.
 
 ### 1. Installing Git (if not already installed)
 
-Open your terminal and run:
+**Option A – Using winget (recommended):**
 
-```bash
-sudo apt-get update
-sudo apt-get install git
+Open **Windows Terminal** (or PowerShell) and run:
+
+```powershell
+winget install --id Git.Git -e --source winget
 ```
+
+**Option B – Manual download:**
+
+Download and install Git from [https://git-scm.com/download/win](https://git-scm.com/download/win). Use the default options during installation.
+
+After installation, restart Windows Terminal and verify:
+
+```powershell
+git --version
+```
+
 ### 2. Temporarily Logging in to Git
 
-If you are using HTTPS to interact with your repositories, you can log in using your GitHub credentials. For security reasons, it's better to use a personal access token instead of your GitHub password.
+If you are using HTTPS to interact with your repositories, you can log in using your GitHub credentials. For security reasons, it’s better to use a personal access token instead of your GitHub password.
 
 #### Create a Personal Access Token:
 
@@ -23,55 +35,70 @@ If you are using HTTPS to interact with your repositories, you can log in using 
 
 #### Configure Git with Your Credentials:
 
-```bash
+```powershell
 git config --global user.name "Your Name"
 git config --global user.email "your-email@example.com"
 ```
+
+When you perform a Git operation that requires authentication (e.g., `git push`), Windows will prompt you via the **Git Credential Manager** — enter your GitHub username and the personal access token as the password.
+
 ### 3. Cloning a Repository
 
 To clone a repository, you need the URL of the repository. This can be found on the repository’s GitHub page.
 
-```bash
+```powershell
 git clone <<URI of the Repo>>
 ```
+
 ### 4. Making Changes
 
 Navigate into the cloned repository:
 
-```bash
+```powershell
 cd repository-name
 ```
 
-Edit or create files as needed using your preferred text editor(VIM)
+Edit or create files using your preferred text editor. For example, open the folder in VS Code:
 
-```bash
-vim example.java
-or
-vi example.java
+```powershell
+code .
 ```
-save the changes.
+
+Or open a specific file with Notepad:
+
+```powershell
+notepad example.java
+```
+
+Save your changes before proceeding.
 
 ### 5. Adding Changes
 
-After making changes, you need to stage them for commit:
+After making changes, stage them for commit:
 
-```bash
+```powershell
 git add .
 ```
-'.' adds all the changed files. You can also specify individual files by specifing the filename.
+
+`'.'` stages all changed files. You can also specify individual files by name:
+
+```powershell
+git add example.java
+```
 
 ### 6. Committing Changes
 
-Commit your changes with a meaningful message:
+Commit your staged changes with a meaningful message:
 
-```bash
+```powershell
 git commit -m "Your commit message"
 ```
+
 ### 7. Pushing Changes
 
 Push your changes to the remote repository:
 
-```bash
+```powershell
 git push origin main
 ```
 
@@ -105,7 +132,6 @@ Create a menu driven program to facilitate the above requirement. The menu shoul
 ##### Steps
  - Create a public class named Marks.
  - Create the main method.
- - Create a 
 
 ## Question 3 :
 Extend the program to display the grades of the student for each subject based on the below criteria.
