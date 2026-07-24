@@ -14,7 +14,7 @@ public class Marks{
 
 		for(int i=0; i<n; i++){
 			for(int j=0; j<3; j++){
-				System.out.println("Enter subject"+ (j+1) + " " + "marks of student" +(i+1));
+				System.out.print("Enter subject"+ (j+1) + " " + "marks of student" +(i+1)+": ");
 				marks[i][j] = input.nextInt();
 			}
 		}
