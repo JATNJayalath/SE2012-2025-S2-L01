@@ -40,6 +40,7 @@ public class Grades{
 			System.out.println("3. Average mark of a Student");
 			System.out.println("4. Total mark of a Student");
 			System.out.println("5. Display Grades");
+			System.out.println("6. Exit");
 
 			System.out.print("Enter your choice: ");
 			choice = input.nextInt();
@@ -56,7 +57,7 @@ public class Grades{
 
 					marks[studentID-1][subjectID-1]=newMark;
 
-					System.out.print("Mark updated successfully");
+					System.out.println("Mark updated successfully");
 				
 					break;
 
@@ -106,6 +107,10 @@ public class Grades{
 					for(int i=0; i<n; i++){
 						System.out.printf("%-10d %-12s %-12s %-12s%n", (i+1), getGrade(marks[i][0]), getGrade(marks[i][1]), getGrade(marks[i][2]));
 					}
+					
+					break;
+				case 6:
+					System.out.println("Exit");
 					
 					break;
 
