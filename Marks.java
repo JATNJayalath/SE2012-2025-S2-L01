@@ -22,7 +22,7 @@ public class Marks{
 
 		do{
 			
-			System.out.println("----Menu----");
+			System.out.println("\n----Menu----");
 			System.out.println("1. Update Marks");
 			System.out.println("2. Average mark of a Subject");
 			System.out.println("3. Average mark of a Student");
@@ -33,22 +33,22 @@ public class Marks{
 
 			switch(choice){
 				case 1:
-					System.out.println("Enter student ID: ");
+					System.out.print("Enter student ID: ");
 					int studentID = input.nextInt();
-					System.out.println("Enter subject ID: ");
+					System.out.print("Enter subject ID: ");
 					int subjectID = input.nextInt();
 				
-					System.out.println("Enter New Mark: ");
+					System.out.print("Enter New Mark: ");
 					int newMark = input.nextInt();
 
 					marks[studentID-1][subjectID-1]=newMark;
 
-					System.out.println("Mark updated successfully");
+					System.out.print("Mark updated successfully");
 				
 					break;
 
 				case 2:
-					System.out.println("Enter subject ID: ");
+					System.out.print("Enter subject ID: ");
 					subjectID = input.nextInt();
 
 					int sumSubject = 0;
@@ -61,7 +61,7 @@ public class Marks{
 
 					break;
 				case 3:
-					System.out.println("Enter student ID(1-" + n + "): ");
+					System.out.print("Enter student ID(1-" + n + "): ");
 					studentID = input.nextInt();
 
 					int sumStudent = 0;
@@ -74,11 +74,25 @@ public class Marks{
 
 					break;
 				case 4:
+					System.out.print("Enter student ID(1-" + n + "):");
+					studentID = input.nextInt();
 
+					int total = 0;
 
+					for(int j=0; j<3; j++){
+						total += marks[studentID - 1][j];
+					}
+
+					System.out.println("Total Marks: " + total);
+					
+					break;
+				default:
+					System.out.println("Invalid Choice");
 			}
 
-		}while(choice != 3);
+		}while(choice != 5);
+
+	input.close();
 
 	}
 }
