@@ -27,6 +27,7 @@ public class Marks{
 			System.out.println("2. Average mark of a Subject");
 			System.out.println("3. Average mark of a Student");
 			System.out.println("4. Total mark of a Student");
+			System.out.println("5. Exit");
 
 			System.out.print("Enter your choice: ");
 			choice = input.nextInt();
@@ -43,7 +44,7 @@ public class Marks{
 
 					marks[studentID-1][subjectID-1]=newMark;
 
-					System.out.print("Mark updated successfully");
+					System.out.println("Mark updated successfully");
 				
 					break;
 
@@ -86,6 +87,10 @@ public class Marks{
 					System.out.println("Total Marks: " + total);
 					
 					break;
+				case 5:
+					System.out.println("Exit");
+					break;
+
 				default:
 					System.out.println("Invalid Choice");
 			}
